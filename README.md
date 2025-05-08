@@ -7,18 +7,6 @@
 ### 📘 Answer: Keyof is a keyword used to extract keys from an interface or a types or from an object type. 
 
 
-## Demo
-
-Insert gif or link to demo
-
-
-# TypeScript Key Concepts: `keyof`, Union, and Intersection Types
-
-
-## What is the use of the keyof keyword in TypeScript? Provide an example.
-
-### 📘 Answer: Keyof is a keyword used to extract keys from an interface or a types or from an object type. 
-
 
 ## 💻 Full Example Code
 
@@ -45,7 +33,10 @@ const jVai: HeroOfProgrammingHero = {
 const result = getValue(jVai, 'name');
 console.log(result);
 
-### Provide an example of using union and intersection types in TypeScript.
+
+
+
+## Provide an example of using union and intersection types in TypeScript.
 
 // union types
 type Dog = {
