@@ -21,7 +21,7 @@
             }
         }
 
-        return highestRating
+        return highestRating;
     }
     const books = [
         { title: "Book A", rating: 4.5 },
@@ -159,10 +159,7 @@
     }
 
     squareAsync(4).then(console.log);       
-    squareAsync(-3).catch(console.error)
-
+    squareAsync(-3).catch(console.error); 
 
     // 
-
-
 }
