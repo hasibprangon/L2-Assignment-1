@@ -8,8 +8,9 @@
         }
     }
 
-    const result1 = formatString('Hridoy', );
+    const result1 = formatString('Hridoy',);
     console.log(result1);
+
 
 
     function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
@@ -27,30 +28,56 @@
         { title: "Book B", rating: 3.2 },
         { title: "Book C", rating: 5.0 },
         { title: "Book D", rating: 4.0 }
-      ];
-      
-      const result2 = filterByRating(books);
-      console.log(result2);
+    ];
+
+    const result2 = filterByRating(books);
+    console.log(result2);
 
 
-      function concatenateArrays<T>(...arrays: T[][]): T[] {
+
+    function concatenateArrays<T>(...arrays: T[][]): T[] {
         let concatArr: T[] = []
-        for(const arr of arrays) {
+        for (const arr of arrays) {
             concatArr = concatArr.concat(arr)
         }
         return concatArr
-      };
+    };
 
-      const result3 = concatenateArrays(['Hasibul', 'Hossain'], ['Prangon']);
-      console.log(result3);
-
-
+    const result3 = concatenateArrays(['Hasibul', 'Hossain'], ['Prangon']);
+    console.log(result3);
 
 
 
+    class Vehicle {
+        private make: string;
+        private year: number;
+        constructor(make: string, year: number) {
+            this.make = make;
+            this.year = year;
+        }
+
+        getInfo(): string {
+            return `Make ${this.make}, year: ${this.year}`
+        }
+    }
+    class Car extends Vehicle {
+        private model: string;
+        constructor(make: string, year: number, model: string) {
+            super(make, year);
+            this.model = model;
+        }
+        getModel(): string {
+            return `Model: ${this.model}`
+        }
+    }
+
+    const myCar = new Car("Toyota", 2020, "Corolla");
+    console.log(myCar.getInfo());
+    console.log(myCar.getModel());
 
 
-   
+
+
 
     // 
 }
