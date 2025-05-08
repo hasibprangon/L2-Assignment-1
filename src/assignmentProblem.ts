@@ -78,52 +78,52 @@
 
 
     function processValue(value: string | number): number {
-        if(typeof value === 'string'){
+        if (typeof value === 'string') {
             return value.length;
-        }else{
+        } else {
             return value * 2;
         }
-      }
+    }
 
-      const result4 = processValue('Hasibul')
-      console.log(result4);
+    const result4 = processValue('Hasibul')
+    console.log(result4);
 
 
 
-      interface Product {
+    interface Product {
         name: string;
         price: number;
-      }
-      
-      function getMostExpensiveProduct(products: Product[]): Product | null {
-        if (products.length === 0) {
-          return null;
-        }
-      
-        let expensivePd = products[0];
-      
-        for (const product of products) {
-          if (product.price > expensivePd.price) {
-            expensivePd = product;
-          }
-        }
-      
-        return expensivePd;
-      }
+    }
 
-      const products = [
+    function getMostExpensiveProduct(products: Product[]): Product | null {
+        if (products.length === 0) {
+            return null;
+        }
+
+        let expensivePd = products[0];
+
+        for (const product of products) {
+            if (product.price > expensivePd.price) {
+                expensivePd = product;
+            }
+        }
+
+        return expensivePd;
+    }
+
+    const products = [
         { name: "Pen", price: 10 },
         { name: "Notebook", price: 25 },
         { name: "Bag", price: 50 },
         { name: "Laptop", price: 50000 }
-      ];
-      
-      const result5 = getMostExpensiveProduct(products);
-      console.log(result5);
+    ];
+
+    const result5 = getMostExpensiveProduct(products);
+    console.log(result5);
 
 
 
-      enum Day {
+    enum Day {
         Monday,
         Tuesday,
         Wednesday,
@@ -131,22 +131,38 @@
         Friday,
         Saturday,
         Sunday
-      }
-      
-      function getDayType(day: Day): string{
-        if(day === Day.Saturday || day === Day.Sunday){
+    }
+
+    function getDayType(day: Day): string {
+        if (day === Day.Saturday || day === Day.Sunday) {
             return 'Weekend'
-        }else{
+        } else {
             return 'Weekday'
         }
-      }
+    }
 
-      const result6 = getDayType(Day.Friday)
-      console.log(result6);
+    const result6 = getDayType(Day.Friday)
+    console.log(result6);
 
-      
+
+
+    async function squareAsync(n: number): Promise<number> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (n < 0) {
+                    reject(new Error('Negative number not allowed'))
+                } else {
+                    resolve(n * n)
+                }
+            }, 1000)
+        });
+    }
+
+    squareAsync(4).then(console.log);       
+    squareAsync(-3).catch(console.error)
+
 
     // 
 
-   
+
 }
