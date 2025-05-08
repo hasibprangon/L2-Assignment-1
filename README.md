@@ -93,11 +93,6 @@ frog.swim();
 ```
 
 
-# Project Title
-
-A brief description of what this project does and who it's for
-
-
 ## Installation
 
 Ensure Node.js and TypeScript are installed.
