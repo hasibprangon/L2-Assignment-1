@@ -33,6 +33,23 @@
       console.log(result2);
 
 
+      function concatenateArrays<T>(...arrays: T[][]): T[] {
+        let concatArr: T[] = []
+        for(const arr of arrays) {
+            concatArr = concatArr.concat(arr)
+        }
+        return concatArr
+      };
+
+      const result3 = concatenateArrays(['Hasibul', 'Hossain'], ['Prangon']);
+      console.log(result3);
+
+
+
+
+
+
+
    
 
     // 
